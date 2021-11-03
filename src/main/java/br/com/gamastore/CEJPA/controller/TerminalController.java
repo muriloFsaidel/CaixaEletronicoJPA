@@ -3,6 +3,7 @@ package br.com.gamastore.CEJPA.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +27,7 @@ public class TerminalController {
 		
 		
 		@PostMapping(value = "/saque")
-		public ResponseEntity<List<String>> realizarSaque(@RequestBody SaqueForm form){
+		public ResponseEntity<List<String>> realizarSaque(@RequestBody @Valid SaqueForm form){
 			
 			
 				if(form.valor % 5 == 0 && form.valor > 4) {
@@ -35,7 +36,7 @@ public class TerminalController {
 				}
 				else {
 					List<String> retorno = new ArrayList<String>();
-					retorno.add("Para sacar, Digite somente valores múltiplos de 5 e maiores que 4");
+					retorno.add("Para sacar, Digite somente valores múltiplos de 5, maiores que 4 e m");
 					return ResponseEntity.ok(retorno);
 				}			
 		}

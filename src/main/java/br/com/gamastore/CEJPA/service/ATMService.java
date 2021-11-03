@@ -37,7 +37,7 @@ public class ATMService {
 			
 				if(form.valor >= notas.get(0)) {
 					
-					quantidade = Integer.parseInt(String.valueOf(form.valor / 100));
+					quantidade = (int) form.valor / 100;
 					
 					for(int i = 0; i < quantidade; i++) {
 						retorno.add("$100");
@@ -48,7 +48,7 @@ public class ATMService {
 				
 				if(form.valor >= notas.get(1)) {
 					
-					quantidade = Integer.parseInt(String.valueOf(form.valor / 50));
+					quantidade = (int) form.valor / 50;
 					
 					for(int i = 0; i < quantidade;i++) {
 						retorno.add("$50");
@@ -58,7 +58,7 @@ public class ATMService {
 				}
 				
 				if(form.valor >= notas.get(2)) {
-					quantidade = Integer.parseInt(String.valueOf(form.valor / 20));
+					quantidade = (int) form.valor / 20;
 					
 					for(int i = 0; i < quantidade;i++) {
 						retorno.add("$20");
@@ -68,7 +68,7 @@ public class ATMService {
 				}
 				
 				if(form.valor >= notas.get(3)) {
-					quantidade = Integer.parseInt(String.valueOf(form.valor / 10));
+					quantidade = (int) form.valor / 10;
 					
 					for(int i = 0; i < quantidade;i++) {
 						retorno.add("$10");
@@ -78,7 +78,7 @@ public class ATMService {
 				}
 				
 				if(form.valor >= notas.get(4)) {
-					quantidade = Integer.parseInt(String.valueOf(form.valor / 5));
+					quantidade = (int) form.valor / 5;
 					
 					for(int i = 0; i < quantidade;i++) {
 						retorno.add("$5");

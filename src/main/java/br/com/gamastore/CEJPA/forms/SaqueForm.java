@@ -1,5 +1,7 @@
 package br.com.gamastore.CEJPA.forms;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 //import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 
@@ -7,6 +9,7 @@ package br.com.gamastore.CEJPA.forms;
 
 public class SaqueForm {
 
+	@NotNull @Min(5)
 	public int valor;
 
 }
